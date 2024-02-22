@@ -17,7 +17,7 @@ To run the Chatbot Web Application locally, follow these steps:
 1. Clone the repository using the following command:
 
 ```bash
-git clone
+git clone https://github.com/jainsaman/chatbot-assignment.git
 ```
 
 2. Navigate to the project directory:
