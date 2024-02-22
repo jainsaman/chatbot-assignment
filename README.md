@@ -4,6 +4,8 @@ Welcome to the Chatbot Web Application! This project is a simple yet effective c
 
 You can checkout the mock data used in the chatbot here - `/src/lib/chatbotConfig/sampleData.ts`
 
+The project is live at - https://chatbot-assignment-jainsaman.vercel.app/
+
 ## Features
 
 - Simple Interface: User-friendly chat interface for seamless interaction.
