@@ -11,7 +11,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="flex flex-col items-start h-90v w-1/5 bg-gray-900 text-gray-200 border-r-2 border-gray-300/25 p-4 gap-y-4">
+    <div className="flex flex-col items-start h-90v w-1/5 bg-gray-900 text-gray-200 border-r-2 border-gray-300/25 p-4 gap-y-4 shadow-2xl">
       <Button
         className="bg-gray-700 hover:bg-gray-800 w-full text-sm flex justify-between text-lg"
         onClick={handleNewChat}

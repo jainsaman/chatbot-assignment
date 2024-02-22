@@ -10,7 +10,7 @@ export default function Chatarea() {
   const [saving, setSaving] = useState(false);
 
   return (
-    <main className="flex flex-col-reverse gap-6 items-start justify-start h-90v w-4/5 bg-gray-800 text-gray-200 p-4 relative">
+    <main className="flex flex-col-reverse gap-6 items-start justify-start h-90v w-4/5 bg-gray-800 text-gray-200 p-4 relative shadow-inner">
       <UserInput onSend={addMessage} /> {/* Render user input component */}
       {messages ? (
         <div className="flex flex-col w-full gap-2">

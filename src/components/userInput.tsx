@@ -51,7 +51,7 @@ export default function UserInput({ onSend }: UserInputProps) {
     <div className="flex gap-2 items-start justify-between w-full">
       <Input
         placeholder="Please enter your query."
-        className="text-base border-0 text-gray-700"
+        className="text-base font-medium border-0 text-gray-700"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         onKeyDown={handleKeyPress}
