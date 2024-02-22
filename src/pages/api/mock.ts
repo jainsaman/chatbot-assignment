@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { generateResponse } from "@/lib/utils";
+import { generateResponse } from "@/lib/utils"; // function used to generate a response based on the user's input.
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { input } = req.query;

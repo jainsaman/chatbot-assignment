@@ -10,8 +10,8 @@ type UserInputProps = {
 };
 
 export default function UserInput({ onSend }: UserInputProps) {
-  const [inputValue, setInputValue] = useState("");
-  const [sending, setSending] = useState(false);
+  const [inputValue, setInputValue] = useState(""); // State to manage input value
+  const [sending, setSending] = useState(false); // State to manage sending state
 
   const sendQuery = () => {
     if (inputValue.trim() === "") return; // Don't send empty queries
@@ -20,23 +20,30 @@ export default function UserInput({ onSend }: UserInputProps) {
       duration: 2000,
     });
     onSend(inputValue, "user"); // Pass input value to onSend function
-    getResponse();
+    getResponse(); // Fetch response
   };
 
   const getResponse = async () => {
     try {
       const res = await fetch(`/api/mock?input=${inputValue}`);
       const data = await res.json();
-      setInputValue("");
+      setInputValue(""); // Clear input value
       setTimeout(() => {
-        onSend(data.response, data.userType);
+        onSend(data.response, data.userType); // Send response to parent component
         if (res.status === 400) {
           toast.error("Sorry, please try again.", { duration: 1500 });
-        }
+        } // Show error toast if status is 400
         setSending(false);
       }, 2000);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching data:", error); //Log error if fetching data fails
+    }
+  };
+
+  // Function to handle Enter key press
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      sendQuery(); // Call sendQuery function if Enter key is pressed
     }
   };
 
@@ -47,6 +54,7 @@ export default function UserInput({ onSend }: UserInputProps) {
         className="text-base border-0 text-gray-700"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        onKeyDown={handleKeyPress}
       />
       <Button
         className="text-base gap-1 hover:bg-gray-900/50"

@@ -1,4 +1,5 @@
 export const queries = [
+  "Hello",
   "What is the weather today?",
   "Tell me a joke",
   "How do I change my password?",
@@ -17,6 +18,10 @@ export const queries = [
 ];
 
 export const responses = [
+  {
+    keyword: ["hello", "hi"],
+    response: "Hello! How can I help you today?",
+  },
   {
     keyword: "weather",
     response: "The weather today is sunny with a high of 75°F.",

@@ -2,6 +2,8 @@
 
 Welcome to the Chatbot Web Application! This project is a simple yet effective chatbot built using Next.js, TypeScript, Shadcn UI, and Tailwind CSS. The chatbot allows users to interact by sending messages and asking questions. It responds with predefined responses based on the user's queries. Additionally, it displays a loading indicator while fetching the response and provides feedback if the query is not found in the mock data. The user can also save chat sessions and continue them later. I have used Next Context API to manage the chat state and user actions and localStorage to save chat sessions. I have used Next.js API routing to set up a mock API to fetch responses for the chatbot.
 
+You can checkout the mock data used in the chatbot here - `/src/lib/chatbotConfig/sampleData.ts`
+
 ## Features
 
 - Simple Interface: User-friendly chat interface for seamless interaction.
